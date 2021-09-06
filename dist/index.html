@@ -8,7 +8,10 @@
 </head>
 <body>
 	<div id="vue-app">
-		<h1>{{name}}</h1>
+		<h1>Events</h1>
+		<button v-on:click="addYear">Add year</button>
+		<button @click="minusYear">Substract year</button>
+		<p>my age is {{age}}</p>
 	</div>
 	<script src="/app.c328ef1a.js"></script>
 </body>

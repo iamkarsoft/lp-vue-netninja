@@ -1,6 +1,14 @@
 new Vue({
 	el: "#vue-app",
 	data:{
-		name:'ramos'
+		age:25
+	},
+	methods: {
+	  addYear () {
+	    this.age++;
+	  },
+	  minusYear(){
+	  	this.age--;
+	  }
 	}
 })
