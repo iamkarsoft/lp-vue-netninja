@@ -9,6 +9,19 @@
 <body>
 	<div id="vue-app">
 		<h1>{{name}}</h1>
+
+		<button @click="error = !error">Toggle Error</button>
+		<button @click="success = !success">Toggle success</button>
+
+		<p v-if="error">
+			<span>There is an error</span>
+		</p>
+
+		<p v-else-if="success">
+			<span>There is a success</span>
+		</p>
+
+		
 	</div>
 	<script src="app.js"></script>
 </body>
