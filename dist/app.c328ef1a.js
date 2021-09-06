@@ -121,7 +121,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 new Vue({
   el: "#vue-app",
   data: {
-    name: 'ramos'
+    name: 'ramos',
+    job: 'Developer',
+    website: 'http://kofi.work',
+    websiteTag: '<a href="https://kofi.work" target="_blank">Kofi</a>'
   }
 });
 },{}],"../../../Users/Ramos/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
