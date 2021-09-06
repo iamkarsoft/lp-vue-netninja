@@ -9,6 +9,9 @@
 <body>
 	<div id="vue-app">
 		<h1>{{name}}</h1>
+
+		<h2>Example 1</h2>
+		<div @click="available = !available" :class="{available:available}"></div>
 	</div>
 	<script src="app.js"></script>
 </body>

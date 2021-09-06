@@ -1,6 +1,7 @@
 new Vue({
 	el: "#vue-app",
 	data:{
-		name:'ramos'
+		name:'Dynamic css',
+		available: true,
 	}
 })
