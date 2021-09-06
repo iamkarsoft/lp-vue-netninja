@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.js"],"names":["Vue","el","data","name"],"mappings":"AAAA,IAAIA,GAAJ,CAAQ;AACPC,EAAAA,EAAE,EAAE,UADG;AAEPC,EAAAA,IAAI,EAAC;AACJC,IAAAA,IAAI,EAAC;AADD;AAFE,CAAR","file":"app.c328ef1a.js","sourceRoot":"..","sourcesContent":["new Vue({\r\n\tel: \"#vue-app\",\r\n\tdata:{\r\n\t\tname:'ramos'\r\n\t}\r\n})"]}
