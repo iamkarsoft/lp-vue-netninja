@@ -118,10 +118,23 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"app.js":[function(require,module,exports) {
+Vue.component('greeting', {
+  template: "\n\t<div><p v-text=\"name\"></p><button @click=\"changeName\">Change Name</button></div>",
+  data: function data() {
+    return {
+      name: 'Component Ramos'
+    };
+  },
+  methods: {
+    changeName: function changeName() {
+      this.name = "Ramos Component";
+    }
+  }
+});
 new Vue({
   el: "#vue-app",
   data: {
-    name: 'ramos'
+    name: 'Components'
   }
 });
 },{}],"../../../Users/Ramos/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -152,7 +165,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53629" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51409" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
