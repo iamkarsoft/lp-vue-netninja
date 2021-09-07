@@ -11,4 +11,4 @@ new Vue({
 			this.$refs.input.value = ''
 		}
 	}
-})
+}) 
