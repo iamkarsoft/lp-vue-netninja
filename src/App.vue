@@ -18,14 +18,15 @@ export default {
   },
   data(){
     return{
-      title: 'Vue Ninjas'
+      title: 'Vue Ninjas',
+      footerTitle: 'Vue Ninjas footer'
     }
   },
   methods: {
     updateTitle (updatedTitle) {
       this.title = updatedTitle
     }
-  }
+  },
 
 };
 </script>

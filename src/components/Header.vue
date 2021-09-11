@@ -2,7 +2,7 @@
     <h1 v-on:click="changeTitle">Header: {{title}} </h1>
 </template>
 <script>
-
+import { bus } from '../main.js'
 export default {
 
     props: {
@@ -12,12 +12,12 @@ export default {
     },
 
     data() {
-        return {
-        }
+        return {}
     },
     methods: {
         changeTitle() {
-            this.$emit('changeTitle', "Vue Wizardry")
+            this.title = 'Vue Wizardry';
+            bus.$emit('titleChanged', "Vue Wizardry")
         }
     }
 
