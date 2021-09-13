@@ -1,24 +1,20 @@
 <template>
     <div id="app">
         <Header />
-        <ShowBlog />
-        <ListBlog />
+          <router-view></router-view>
         <Footer />
     </div>
 </template>
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
-import ListBlog from './components/ListBlog.vue'
-import ShowBlog from './components/ShowBlog.vue'
 
 export default {
     name: 'App',
     components: {
         Header,
         Footer,
-        ShowBlog,
-        ListBlog,
+        
     },
 
 };
