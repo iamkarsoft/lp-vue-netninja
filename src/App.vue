@@ -1,8 +1,12 @@
 <template>
     <div id="app">
         <Header />
-        <h2>{{title | to-uppercase}}</h2>
-        <p>{{content | snippet}}</p>
+        <input type="text" v-model="search" placeholder="Search blog">
+        <div v-for="blog in filteredBlogs" :key="blog.title">
+          
+          <h2>{{blog.title | to-uppercase}}</h2>
+          <p>{{blog.content | snippet}}</p>
+        </div>
         <Footer />
     </div>
 </template>
@@ -18,9 +22,29 @@ export default {
     },
     data() {
         return {
-            title: "Lorem, ipsum dolor sit amet consectetur.",
-            content: "Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Esse nisi laborum odit facilis blanditiis suscipit reprehenderit, at pariatur illo, consequuntur!"
+            blogs: [
+              {
+                title: "Lorem, ipsum dolor sit amet consectetur.",
+                content: "Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Esse nisi laborum odit facilis blanditiis suscipit reprehenderit, at pariatur illo, consequuntur!"
+              },
+              {
+                title: "lorem5 sdfsdfsd kf skafjdskfs",
+                content: "I know i'm coming from mars"
+              },
+              {
+                title: "Bruno Mars",
+                content: "I'll catch a grenade for you"
+              }
+            ],
+        search: '',
         }
+    },
+    computed: {
+      filteredBlogs () {
+        return this.blogs.filter((blog)=>{
+          return blog.title.match(this.search);
+        });
+      }
     }
 
 };
