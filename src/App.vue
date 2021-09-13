@@ -1,27 +1,25 @@
 <template>
     <div id="app">
         <Header />
-        <h2>{{title | to-uppercase}}</h2>
-        <p>{{content | snippet}}</p>
+        <ShowBlog />
+        <ListBlog />
         <Footer />
     </div>
 </template>
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import ListBlog from './components/ListBlog.vue'
+import ShowBlog from './components/ShowBlog.vue'
 
 export default {
     name: 'App',
     components: {
         Header,
-        Footer
+        Footer,
+        ShowBlog,
+        ListBlog,
     },
-    data() {
-        return {
-            title: "Lorem, ipsum dolor sit amet consectetur.",
-            content: "Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Esse nisi laborum odit facilis blanditiis suscipit reprehenderit, at pariatur illo, consequuntur!"
-        }
-    }
 
 };
 </script>
